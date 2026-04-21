@@ -25,6 +25,13 @@ window.addEventListener("scroll", () => {
     nav.style.boxShadow = "0 0 20px rgba(124,58,237,0.15)";
   }
 });
+
+// navbar update on scroll
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector(".navbar");
+  nav.classList.toggle("scrolled", window.scrollY > 50);
+});
+
 // Scroll-based animations
 document.addEventListener("scroll", () => {
   document.querySelectorAll(".reveal").forEach(el => {
@@ -64,4 +71,50 @@ buttons.forEach(btn => {
   btn.addEventListener("mouseleave", () => {
     btn.style.transform = "translate(0,0)";
   });
+});
+
+// reveal
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("reveal-show");
+    }
+  });
+},{threshold:0.15});
+
+reveals.forEach(el=>{
+  el.classList.add("reveal-hidden");
+  observer.observe(el);
+});
+
+// PAGE TRANSITION
+const transition = document.querySelector(".page-transition");
+
+// ON PAGE LOAD (reveal)
+window.addEventListener("load", () => {
+  transition.classList.add("active");
+
+  setTimeout(() => {
+    transition.classList.add("exit");
+  }, 300);
+});
+
+// ON LINK CLICK (enter transition)
+document.querySelectorAll("a[href]").forEach(link => {
+  const url = link.getAttribute("href");
+
+  if (url && !url.startsWith("#") && !url.startsWith("http")) {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+
+      transition.classList.remove("exit");
+      transition.classList.add("active");
+
+      setTimeout(() => {
+        window.location.href = url;
+      }, 500);
+    });
+  }
 });
