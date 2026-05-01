@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vanilla Studio | CTSA</title>
+<title>Vanilla Studio | TCSA</title>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-VS.png">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -33,23 +33,31 @@
   </div>
 
 </nav>
+ <!--HERO -->
+<section class="hero-v2">
+  <div class="hero-glow"></div>
 
-<section class="hero">
+
   <img src="vslogo.svg" class="hero-img">
-  <h1 class="title">Vanilla Studio</h1>
-  <h2 class="gradient-text">ENGINEERING THE FUTURE OF CYBER SYSTEMS</h2>
-  <p class="subtitle">
-    Vanilla Studio builds secure, high-performance digital infrastructures for modern businesses — 
-    combining cyber intelligence, precision development, and elite design.
+  <h1 style="background: linear-gradient(90deg, #7c3aed, #002FA7, #22d3ee); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ENGINEERING THE FUTURE OF CYBER SYSTEMS</h1>
+
+  <p>
+    We design secure, 
+    high-performance digital infrastructures built to withstand modern threats 
+    and scale with precision.
   </p>
 
-  <div class="alert-bar">
-    Trusted principles. Engineered systems. Proven performance.
-  </div>
+  <div class="alert-bar">Trusted principles. Engineered systems. Proven performance.</div>
 
   <div class="btn-group">
     <a href="contact.html" class="btn">Get Security Audit</a>
     <a href="services.html" class="btn primary">Explore Solutions</a>
+  </div>
+
+  <div class="trust-bar">
+    <span>✔ Security-first architecture</span>
+    <span>✔ Performance optimized</span>
+    <span>✔ Real-world threat analysis</span>
   </div>
 </section>
 
@@ -66,6 +74,18 @@
   <p><strong>Focus:</strong> Web Security, Network Defense, Risk Assessment</p>
 </section>
 
+
+ <!--SPLIT SECTION -->
+<section class="split-section">
+  <div>
+    <h2 style="background: linear-gradient(90deg, #7c3aed, #002FA7, #22d3ee); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Your System Might Already Be Exposed</h2>
+    <p>
+      Most digital infrastructures contain hidden vulnerabilities. Our job is to find them before attackers do.
+    </p>
+  </div>
+  <div class="visual-box"></div>
+</section>
+
 <div class="status">
  <p>System Status: <span>SECURE</span></p>
  <p>Threat Level: <span>LOW</span></p>
@@ -73,24 +93,27 @@
  <p>Threats Blocked: <span id="counter">0</span></p>
 </div>
 
-<section class="section reveal dashbaord-reveal">
-<h1 class="reveal-title">CORE CAPABILITIES</h1>
-<div class="cards">
-<div class="dash-card">
-  <h3>🔍 Cyber Infrastructure</h3>
-  <p>Secure, scalable systems designed for resilience and performance.</p>
-</div>
+<!--FEATURES -->
+<section class="features">
+  <div class="feature">
+    <h3 style="background: linear-gradient(90deg, #7c3aed, #002FA7, #22d3ee); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🔍 Infrastructure Analysis</h3>
+    <p>Deep inspection of systems, networks, and endpoints.</p>
+  </div>
 
-<div class="dash-card">
-  <h3>🛡 High-Performance Web Systems</h3>
-  <p>Lightning-fast, optimized platforms engineered for modern users.</p>
-</div>
+  <div class="feature">
+    <h3 style="background: linear-gradient(90deg, #7c3aed, #002FA7, #22d3ee); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🛡 Security Engineering</h3>
+    <p>Systems designed to prevent, detect, and respond.</p>
+  </div>
 
-<div class="dash-card">
-  <h3>⚙ Data & System Analysis</h3>
-  <p>Intelligent insights that drive smarter digital decisions.</p>
-</div>
-</div>
+  <div class="feature">
+    <h3 style="background: linear-gradient(90deg, #7c3aed, #002FA7, #22d3ee); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">⚡ Performance Optimization</h3>
+    <p>Speed, efficiency, and scalability engineered in.</p>
+  </div>
+
+  <div class="feature">
+    <h3 style="background: linear-gradient(90deg, #7c3aed, #002FA7, #22d3ee); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🧠 Cyber Intelligence</h3>
+    <p>Data-driven insights for smarter decisions.</p>
+  </div>
 </section>
 
 <section class="section reveal dashboard-reveal">
@@ -122,13 +145,6 @@
   </div>
 </section>
 
-<section class="terminal">
-  <p>> scanning network...</p>
-  <p>> detecting vulnerabilities...</p>
-  <p>> securing endpoints...</p>
-  <p class="success">> system protected</p>
-</section>
-
 <section class="dashboard-reveal">
   <h1 class="reveal-title">Security Overview</h1>
 
@@ -152,19 +168,13 @@
   </div>
 </section>
 
-<section class="global-cta">
-  <h2>Ready to build something powerful?</h2>
-  <p>Partner with professionals who understand modern threats.</p>
 
-  <div class="next-step">
-    <p>Next Step:</p>
-    <a href="services.html" class="btn">Explore Services →</a>
-    <a href="contact.html" class="btn">Get Protected →</a>
-  </div>
+ <!--FLOATING CTA -->
 
-</section>
 
-<!-- FLOATING CTA -->
+<section class="cta-final">
+ <h2>Ready to build something powerful?</h2>
+  <p>Partner with professionals who understand modern threats.</p> 
 <a href="contact.html" class="floating-cta">Get Started</a>
 
 <footer>
@@ -173,6 +183,11 @@
   <p>Cyber-Tech Analyst Company</p>
 </footer>
 
+<!-- GSAP CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<!--Main js script-->
 <script src="main.js"></script>
 <script>
 /* THREAT COUNTER */
@@ -184,13 +199,53 @@ setInterval(()=>{
   counter.textContent = count;
 }, 1500);
 
-/* PARALLAX EFFECT */
-document.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
+// REGISTER GSAP
+ gsap.registerPlugin(ScrollTrigger);
 
-  document.querySelector(".hero").style.transform =
-    `translateY(${scrollY * 0.2}px)`;
-});
+// HERO ANIMATION
+ gsap.from(".hero-v2 h1", {
+   opacity:0,
+   y:50,
+   duration:1,
+   ease:"power3.out"
+ });
+
+ gsap.from(".hero-v2 p", {
+   opacity:0,
+   y:30,
+   delay:0.3,
+   duration:1,
+   ease:"power3.out"
+ });
+
+ gsap.from(".btn-group a", {
+   opacity:0,
+   y:20,
+   delay:0.6,
+   duration:0.8,
+   stagger:0.2
+ });
+
+// SPLIT SECTION ANIMATION
+ gsap.from(".split-section div:first-child", {
+   scrollTrigger:{
+     trigger:".split-section",
+     start:"top 80%"
+   },
+   opacity:0,
+   x:-80,
+   duration:1
+ });
+
+ gsap.from(".visual-box", {
+    scrollTrigger:{
+      trigger:".split-section",
+      start:"top 80%"
+    },
+    opacity:0,
+    x:80,
+    duration:1
+  });
 </script>
 <canvas id="particles"></canvas>
 <script src="particles.js"></script>
